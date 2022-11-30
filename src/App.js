@@ -1,12 +1,9 @@
+import { AsideMobile } from "./Components/Aside/AsideMobile";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Hey
-        </p>
-      </header>
+    <div>
+      <AsideMobile />
     </div>
   );
 }
