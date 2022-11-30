@@ -18,15 +18,11 @@ export function Header() {
         <Navbar className='bg-light'>
             <Container>
                 <Navbar.Brand >
-
                     <BtnLogin
                         name={<RxHamburgerMenu />}
                         openModal={handleShow}
                         size='sm'
                     />
-                    {/* <Button onClick={() => handleShow(true)}>
-                        <RxHamburgerMenu />
-                    </Button> */}
                     <Modal className='p-0' show={show} fullscreen={fullscreen} onHide={() => setShow(false)}>
                         <Modal.Header closeButton>
                             <Modal.Title>Modal</Modal.Title>
