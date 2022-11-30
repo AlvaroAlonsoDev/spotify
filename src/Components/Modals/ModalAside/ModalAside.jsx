@@ -1,26 +1,29 @@
-import { useState } from "react";
-import { Modal } from "react-bootstrap";
-import { MainBtn } from "../../Buttons/MainBtn/MainBtn";
 
+import { useState } from 'react';
+import { Modal } from 'react-bootstrap';
+import {RxHamburgerMenu} from "react-icons/rx"
+import { MainBtn } from '../../Buttons/MainBtn/MainBtn';
 
+const ModalAside = () => {
 
-const ModalLogin = () => {
     const [fullscreen, setFullscreen] = useState(true);
     const [show, setShow] = useState(false);
     function handleShow(v) {
         setFullscreen(v);
         setShow(true);
     }
+
     return (
         <>
             <MainBtn
-                name='login'
+                name={<RxHamburgerMenu />}
                 openModal={handleShow}
-
+            
             />
+
             <Modal className='p-0' show={show} fullscreen={fullscreen} onHide={() => setShow(false)}>
                 <Modal.Header closeButton>
-                    <Modal.Title>Pepe</Modal.Title>
+                    <Modal.Title>Modal</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>Modal body content</Modal.Body>
             </Modal>
@@ -28,4 +31,4 @@ const ModalLogin = () => {
     )
 }
 
-export default ModalLogin
+export default ModalAside
