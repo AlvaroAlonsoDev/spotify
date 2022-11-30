@@ -1,9 +1,10 @@
-import { AsideMobile } from "./Components/Aside/AsideMobile";
+import { Header } from "./Components/Header/Header";
+
 
 function App() {
   return (
     <div>
-      <AsideMobile />
+      <Header />
     </div>
   );
 }
