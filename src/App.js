@@ -1,11 +1,14 @@
 import { Header } from "./Components/Header/Header";
+import ApiProvider from "./helper/context/ApiProvider";
 
 
 function App() {
   return (
-    <div>
-      <Header />
-    </div>
+    <>
+      <ApiProvider>
+        <Header />
+      </ApiProvider>
+    </>
   );
 }
 
