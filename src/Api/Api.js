@@ -1,6 +1,6 @@
 // axios
 import axios from "axios";
-import { userSlice } from "../redux/features/userData/userSlice";
+import { setUserList, userSlice } from "../redux/features/userData/userSlice";
 
 export const getDataUser = () => (dispatch) => {
     axios
