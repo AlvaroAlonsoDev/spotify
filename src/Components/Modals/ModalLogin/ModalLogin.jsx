@@ -20,7 +20,7 @@ const ModalLogin = () => {
             />
             <Modal className='p-0' show={show} fullscreen={fullscreen} onHide={() => setShow(false)}>
                 <Modal.Header closeButton>
-                    <Modal.Title>Pepe</Modal.Title>
+                    <Modal.Title>Login</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>Modal body content</Modal.Body>
             </Modal>
