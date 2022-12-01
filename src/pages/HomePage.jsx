@@ -1,18 +1,18 @@
 import React, { useEffect } from 'react'
 
 // redux
-import { useDispatch, useSelector } from 'react-redux';
+// import { useDispatch, useSelector } from 'react-redux';
 
 const HomePage = () => {
-  const data = useSelector(state => state.users);
+  // const data = useSelector(state => state.users);
 
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
-  useEffect(() => {
-    dispatch(getDataUser());
-  }, [])
-  useEffect(() => {
-  })
+  // useEffect(() => {
+  //   dispatch(getDataUser());
+  // }, [])
+  // useEffect(() => {
+  // })
 
 
   return (

@@ -4,14 +4,14 @@ import AppRouter from "./routes/AppRouter";
 import ApiProvider from "./helpers/Contexts/Api/ApiProvider";
 
 // Redux
-import { Provider } from 'react-redux';
-import store from './redux/store';
+// import { Provider } from 'react-redux';
+// import store from './redux/store';
 
 function App() {
 
   return (
     <>
-      <Provider store={store}>
+      <Provider>
         <BrowserRouter >
           <ApiProvider>
             <Header />
