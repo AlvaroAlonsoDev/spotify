@@ -77,6 +77,7 @@
             "first_name": "Assembler",
             "last_name": "Institute",
             "email": "music@assemblerschool.com",
+            "password": "123",
             "playlists": [
                 {
                     "id": 1,
