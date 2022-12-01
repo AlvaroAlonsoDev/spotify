@@ -1,24 +1,20 @@
-import { createSlice } from "@reduxjs/toolkit"
-import { getDataUser } from "../../../Api/Api";
+import { createSlice } from "@reduxjs/toolkit";
 
 
 export const userSlice = createSlice({
-
-    name: "dataUser",
-    initialState:[],
-    reducer: {
-
-        setUser:(state, action) => {
-            state.listUsers = action.payload 
+    name: "users",
+    initialState: {
+        list: [],
+    },
+    reducers: {
+        setUserList: (state, action) => {
+            state.list = action.payload;
         }
-    }
+    },
 });
-export const {setUser} = userSlice.actions; 
+
+export const { setUserList } = userSlice.actions;
 
 export default userSlice.reducer;
 
 
-export const fetchUser = async (dispatch)=>{
-    const data = await getDataUser();
-    dispatch(setUser(data))
-}

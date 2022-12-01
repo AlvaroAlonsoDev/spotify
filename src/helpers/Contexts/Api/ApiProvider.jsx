@@ -1,5 +1,5 @@
 import React from 'react'
-import { getDataUser } from '../../Api/Api'
+import { getDataUser } from '../../../api/Api'
 import { ApiContext } from './ApiContext';
 
 const ApiProvider = ({ children }) => {

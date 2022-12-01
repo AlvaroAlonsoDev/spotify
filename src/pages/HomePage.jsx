@@ -1,20 +1,28 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useEffect } from 'react'
 
-import { fetchUser } from '../redux/features/userData/userSlice'
-import {useDispatch} from 'react-redux'
+// redux
+import { useDispatch, useSelector } from 'react-redux';
 
 const HomePage = () => {
+  const data = useSelector(state => state.users);
 
-const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
-useEffect(()=>{
-  dispatch(fetchUser);
-}, []);
-
+  useEffect(() => {
+    dispatch(getDataUser());
+  }, [])
+  useEffect(() => {
+  })
 
 
   return (
-    <div>HomePage</div>
+    <>
+    {/* {
+      users.map(user => (
+        <div>{user.username}</div>
+      ))
+    } */}
+    </>
   )
 }
 

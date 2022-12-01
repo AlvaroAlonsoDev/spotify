@@ -1,16 +1,17 @@
 import { BrowserRouter } from "react-router-dom";
 import { Header } from "./Components/Header/Header";
-import ApiProvider from "./helper/context/ApiProvider";
 import AppRouter from "./routes/AppRouter";
-import {Provider} from "react-redux"
-import {redux} from "./redux"
+import ApiProvider from "./helpers/Contexts/Api/ApiProvider";
+
+// Redux
+import { Provider } from 'react-redux';
+import store from './redux/store';
 
 function App() {
 
-
   return (
     <>
-      <Provider redux={redux}>
+      <Provider store={store}>
         <BrowserRouter >
           <ApiProvider>
             <Header />

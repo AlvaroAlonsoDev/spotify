@@ -1,9 +1,12 @@
-export const getDataUser = async () => {
-    try {
-        const response = await fetch("http://localhost:4000/user")
-        const data = await response.json();
-        return data;
-    } catch (error) {
-        console.log(error);
-    }
-}
+// axios
+import axios from "axios";
+import { userSlice } from "../redux/features/userData/userSlice";
+
+export const getDataUser = () => (dispatch) => {
+    axios
+        .get("http://localhost:4000/user")
+        .then((response) => {
+            dispatch(setUserList(response.data));
+        })
+        .catch((error) => console.log(error));
+};

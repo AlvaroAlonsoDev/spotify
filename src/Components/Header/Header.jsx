@@ -9,15 +9,9 @@ import ModalAside from '../Modals/ModalAside/ModalAside';
 
 
 export function Header() {
-    const [fullscreen, setFullscreen] = useState(true);
-    const [show, setShow] = useState(false);
-    function handleShow(v) {
-        setFullscreen(v);
-        setShow(true);
-    }
+    
     return (
-        <Navbar className='bg-light'>
-            <Container>
+        <Navbar className='bg-light mx-4'>
                 <Navbar.Brand >
                     <ModalAside />
                 </Navbar.Brand>
@@ -26,7 +20,6 @@ export function Header() {
                 <Navbar.Collapse className="justify-content-end">
                     <ModalLogin />
                 </Navbar.Collapse>
-            </Container>
         </Navbar>
     );
 }
