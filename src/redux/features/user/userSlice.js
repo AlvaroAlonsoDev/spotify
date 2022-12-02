@@ -10,11 +10,13 @@ export const userSlice = createSlice({
     reducers: {
         setUserList: (state, action) => {
             state.list = action.payload;
+        },
+        setUserLogged: (state, action) => {
+            state.userLogged = action.payload;
         }
-        
     },
 });
 
-export const { setUserList } = userSlice.actions;
+export const { setUserList, setUserLogged } = userSlice.actions;
 
 export default userSlice.reducer;

@@ -3,13 +3,15 @@ import { Modal } from "react-bootstrap";
 import { MainBtn } from "../../Buttons/MainBtn/MainBtn";
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { setUserLogged } from "../../../redux/features/user/userSlice";
 
 
 const ModalLogin = () => {
     const [fullscreen, setFullscreen] = useState(true);
     const [show, setShow] = useState(false);
     const usersData = useSelector(state => state.userSlice.list);
+    const dispatch = useDispatch();
 
     function handleShow(v) {
         setFullscreen(v);
@@ -26,16 +28,25 @@ const ModalLogin = () => {
             password: e.target.password.value
         }
 
-        const checkUser = usersData.find((user) => user.password === loginUser.password)
-        const checkPassword = usersData.find((user) => user.email === loginUser.email)
-        
-        if (findUser) {
-            console.log(findUser);            
+        const checkUser = usersData.find((user) => user.email === loginUser.email)
+
+        if (checkUser) {
+            if (checkUser.password === loginUser.password) {
+                console.log('Credenciales correctas');            
+                dispatch(setUserLogged(checkUser));
+                setShow(false);
+            } else {
+                console.log('Password incorrecto');
+            }
         } else {
-            console.log('Credenciales no validas');
+            console.log('Email incorrecto');
         }
-        // const findUser = 
+        
     }
+
+    // 1 SI ESTA LOGEADO QUITAR BOTON LOGIN Y PONER LOGOUT
+    // 2 FUNCION LOGOUT
+
 
     return (
         <>
