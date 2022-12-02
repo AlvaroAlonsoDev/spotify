@@ -4,7 +4,7 @@ import { MainBtn } from "../../Buttons/MainBtn/MainBtn";
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { useDispatch, useSelector } from "react-redux";
-import { setUserLogged } from "../../../redux/features/user/userSlice";
+import { setUserLogged, setIsLogged } from "../../../redux/features/user/userSlice";
 
 
 const ModalLogin = () => {
@@ -34,6 +34,7 @@ const ModalLogin = () => {
             if (checkUser.password === loginUser.password) {
                 console.log('Credenciales correctas');            
                 dispatch(setUserLogged(checkUser));
+                dispatch(setIsLogged(true));
                 setShow(false);
             } else {
                 console.log('Password incorrecto');
@@ -46,7 +47,6 @@ const ModalLogin = () => {
 
     // 1 SI ESTA LOGEADO QUITAR BOTON LOGIN Y PONER LOGOUT
     // 2 FUNCION LOGOUT
-
 
     return (
         <>

@@ -4,6 +4,7 @@ import { createSlice } from "@reduxjs/toolkit";
 export const userSlice = createSlice({
     name: "usersData",
     initialState: {
+        isLogged: false,
         userLogged: null,
         list: [],
     },
@@ -13,10 +14,14 @@ export const userSlice = createSlice({
         },
         setUserLogged: (state, action) => {
             state.userLogged = action.payload;
+        },
+        setIsLogged: (state, action) => {
+            state.isLogged = action.payload;
         }
     },
 });
 
-export const { setUserList, setUserLogged } = userSlice.actions;
+export const { setUserList, setUserLogged, setIsLogged } = userSlice.actions;
 
 export default userSlice.reducer;
+
