@@ -129,6 +129,7 @@
             "first_name": "Lidia",
             "last_name": "Frias",
             "email": "lidia@lidia.com",
+            "password": "1234",
             "playlists": [
                 {
                     "id": 1,

@@ -12,6 +12,4 @@ export const Helper = () => {
     useEffect(() => {
         dispatch(fetchGetUsers());
     }, [dispatch])
-
-    console.log(users);
 }
