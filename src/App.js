@@ -3,8 +3,8 @@ import { Header } from "./Components/Header/Header";
 import AppRouter from "./routes/AppRouter";
 
 // Redux
-import { Provider } from 'react-redux';
-import store from './redux/store';
+//import { Provider } from 'react-redux';
+//import store from './redux/store';
 import { Helper } from "./Components/Helper/Helper";
 
 function App() {
@@ -12,13 +12,13 @@ function App() {
   return (
     <>
       <BrowserRouter >
-        <Provider store={store}>
-          <Helper />
 
-          <Header />
-          <AppRouter />
+        <Helper />
 
-        </Provider>
+        <Header />
+        <AppRouter />
+
+
       </BrowserRouter>
     </>
   );

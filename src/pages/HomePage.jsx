@@ -4,7 +4,8 @@ import React from 'react'
 import { useSelector } from 'react-redux';
 
 const HomePage = () => {
-  const users = useSelector(state => state.userSlice);
+  const users = useSelector(state => state.usersData);
+  console.log(users);
 
 
   return (
@@ -12,12 +13,12 @@ const HomePage = () => {
       <div className='m-2 p-2'>
         <h4>Users in DataBase</h4>
         <ol>
-          {
+          {/*           {
             (users.list).map((user, index) => (
               <li key={index}>{user.username}</li>
             ))
           }
-        </ol>
+ */}        </ol>
       </div>
     </>
   )
