@@ -4,15 +4,15 @@ import { MainBtn } from "../../Buttons/MainBtn/MainBtn";
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { useDispatch, useSelector } from "react-redux";
-import { setUserLogged, setIsLogged } from "../../../redux/features/user/userSlice";
+import { setUserLogged, setIsLogged, setLogout } from "../../../redux/features/user/userSlice";
 
 
 const ModalLogin = () => {
     const [fullscreen, setFullscreen] = useState(true);
     const [show, setShow] = useState(false);
-    const usersData = useSelector(state => state.userSlice.list);
+    const usersData = useSelector(state => state.userSlice);
     const dispatch = useDispatch();
-
+    console.log(usersData.isLogged);
     function handleShow(v) {
         setFullscreen(v);
         setShow(true);
@@ -28,11 +28,11 @@ const ModalLogin = () => {
             password: e.target.password.value
         }
 
-        const checkUser = usersData.find((user) => user.email === loginUser.email)
+        const checkUser = (usersData.list).find((user) => user.email === loginUser.email)
 
         if (checkUser) {
             if (checkUser.password === loginUser.password) {
-                console.log('Credenciales correctas');            
+                console.log('Credenciales correctas');
                 dispatch(setUserLogged(checkUser));
                 dispatch(setIsLogged(true));
                 setShow(false);
@@ -42,7 +42,11 @@ const ModalLogin = () => {
         } else {
             console.log('Email incorrecto');
         }
-        
+
+    }
+
+    const logout = () => {
+        dispatch(setLogout());
     }
 
     // 1 SI ESTA LOGEADO QUITAR BOTON LOGIN Y PONER LOGOUT
@@ -50,21 +54,22 @@ const ModalLogin = () => {
 
     return (
         <>
-            <MainBtn
+            {usersData.isLogged ? <button onClick={logout}>Logout</button> : <MainBtn
                 name='login'
                 openModal={handleShow}
-            />
+            />}
+
             <Modal className='p-0' show={show} fullscreen={fullscreen} onHide={() => setShow(false)}>
                 <Modal.Header closeButton>
                     <Modal.Title>Login</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                    <Form onSubmit={ (e) => login(e) }>
+                    <Form onSubmit={(e) => login(e)}>
                         <Form.Group className="mb-3" controlId="formBasicEmail">
                             <Form.Label>Email address</Form.Label>
                             <Form.Control type="email" placeholder="Enter email" name="email" />
                             <Form.Text className="text-muted">
-                            We'll never share your email with anyone else.
+                                We'll never share your email with anyone else.
                             </Form.Text>
                         </Form.Group>
 
@@ -79,7 +84,7 @@ const ModalLogin = () => {
                             Submit
                         </Button>
                     </Form>
-                    
+
                 </Modal.Body>
             </Modal>
         </>
