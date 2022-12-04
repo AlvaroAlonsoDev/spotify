@@ -18,7 +18,8 @@ const ModalAside = () => {
             <MainBtn
                 name={<RxHamburgerMenu />}
                 openModal={handleShow}
-
+                className='text-dark'
+                variant='link'
             />
 
             <Modal className='p-0' show={show} fullscreen={fullscreen} onHide={() => setShow(false)}>
