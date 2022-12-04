@@ -1,10 +1,17 @@
 // axios
 import axios from "axios";
-import { setUserList } from "../redux/features/user/userSlice";
 
-export const fetchGetUsers = () => (dispatch) => {
-    axios
-        .get("http://localhost:4000/user")
-        .then((response) => { dispatch(setUserList(response.data)) })
-        .catch((error) => console.log(error));
+import { registerUser, setUserList } from "../redux/features/user/userSlice";
+
+export const fetchGetUsers = () => async (dispatch) => {
+    try {
+        const response = await axios.get("http://localhost:4000/user")
+        await dispatch(setUserList(response.data))
+    } catch (error) {
+        console.log(error);
+    }
 };
+
+
+//prueba mía
+
