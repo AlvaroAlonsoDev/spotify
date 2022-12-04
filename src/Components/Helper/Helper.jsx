@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 
 // redux
-import { fetchGetUsers } from "../../api/Api";
+import { fetchGetUsers } from "../../Api/Api";
 import { useDispatch } from 'react-redux';
 
 

@@ -1,13 +1,11 @@
 // redux
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 
-import { v4 as uuidv4 } from 'uuid';
+
 import { useState } from "react";
 import { Button, Modal } from "react-bootstrap";
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
-
-import { functionRegister } from "../../../api/postApi";
-import { setUserLogged } from '../../../redux/features/user/userSlice';
+import { functionRegister } from "../../../Api/postApi";
 
 
 export const ModalRegister = () => {
@@ -19,7 +17,6 @@ export const ModalRegister = () => {
         setFullscreen(v);
         setShow(true);
     }
-    //! PASAR AL API POST
     const register = (e) => {
         e.preventDefault();
         

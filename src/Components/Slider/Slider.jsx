@@ -42,7 +42,7 @@ export default function Slider({ userData }) {
                 {
                     userData.list.map((e, i) => (
                         <SwiperSlide key={i}>
-                            <div className="profile-card-6"><img src="http://envato.jayasankarkr.in/code/profile/assets/img/profile-6.jpg" className="img img-responsive" />
+                            <div className="profile-card-6"><img src="http://envato.jayasankarkr.in/code/profile/assets/img/profile-6.jpg" className="img img-responsive" alt="img" />
                                 <div className="profile-name"><BsHeart /> {e.username}
                                 </div>
                                 {/* <div className="profile-position">Lorem Ipsum Donor</div> */}

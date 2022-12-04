@@ -1,5 +1,5 @@
 import axios from "axios";
-import { registerUser, setUserLogged } from "../redux/features/user/userSlice";
+import { registerUser } from "../redux/features/user/userSlice";
 import { v4 as uuidv4 } from 'uuid';
 
 
@@ -18,5 +18,4 @@ export const functionRegister = async(e, dispatch) => {
         password: e.target.password.value
     }
     await fetchPostUser(new_user, dispatch);
-    await dispatch(setUserLogged(new_user));
 }

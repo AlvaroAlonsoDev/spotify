@@ -19,13 +19,16 @@ export const userSlice = createSlice({
         setUserLogOut: (state) => {
             state.isLogged = false;
             state.userLogged = null;
+            console.log('Te deslogeaste wey');
         },
         registerUser: (state, action) => {
             state.list = [...state.list, action.payload];
+            state.userLogged = action.payload;
+            state.isLogged = true;
         },
         setNewPassword: (state, action) => {
             let interim = [];
-            (state.list).map(e => {
+            (state.list).forEach(e => {
                 if (e.id === action.payload.id) {
                     const x = action.payload;
                     interim.push(x)

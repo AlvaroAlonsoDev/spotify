@@ -7,7 +7,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { ModalRecoveryPassword } from "../ModalRecoveryPassword/ModalRecoveryPassword";
 import { ModalRegister } from "../ModalRegister/ModalRegister";
 import { IoIosArrowBack } from "react-icons/io";
-import { functionLogin } from "../../../api/Api";
+import { functionLogin } from "../../../Api/Api";
 
 
 const ModalLogin = () => {

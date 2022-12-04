@@ -4,7 +4,7 @@ import { MainBtn } from "../../Buttons/MainBtn/MainBtn";
 import { IoIosArrowBack } from "react-icons/io";
 // redux
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchPutUser } from "../../../api/putApi";
+import { fetchPutUser } from "../../../Api/putApi";
 
 
 export const ModalRecoveryPassword = () => {
