@@ -19,38 +19,25 @@ const ModalLogin = () => {
     }
 
     const login = (e) => {
-        // 1 RECGEOR LA INFO DEL FORM 
-        // 2 VALIDAR INFO
-        // 3 DISPATCH
         e.preventDefault();
         const loginUser = {
             email: e.target.email.value,
             password: e.target.password.value
         }
-
         const checkUser = (usersData.list).find((user) => user.email === loginUser.email)
-
-        if (checkUser) {
-            if (checkUser.password === loginUser.password) {
-                console.log('Credenciales correctas');
-                dispatch(setUserLogged(checkUser));
-                dispatch(setIsLogged(true));
-                setShow(false);
-            } else {
-                console.log('Password incorrecto');
-            }
+        if (checkUser && checkUser.password === loginUser.password) {
+            console.log('Credenciales correctas');
+            dispatch(setUserLogged(checkUser));
+            dispatch(setIsLogged(true));
+            setShow(false);
         } else {
             console.log('Email incorrecto');
         }
-
     }
 
     const logout = () => {
         dispatch(setLogout());
     }
-
-    // 1 SI ESTA LOGEADO QUITAR BOTON LOGIN Y PONER LOGOUT
-    // 2 FUNCION LOGOUT
 
     return (
         <>
