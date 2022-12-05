@@ -1,4 +1,3 @@
-import React from "react";
 import { FaRegPlayCircle } from "react-icons/fa";
 
 // Import Swiper React components
@@ -13,9 +12,12 @@ import "./slider.css";
 
 // import required modules
 import { Pagination } from "swiper";
+import { useSelector } from "react-redux";
+import { CardSmall } from "../Card/CardSmall";
 
 
-export default function Slider({ userData }) {
+export default function Slider() {
+    const trackList = useSelector(state => state.trackSlice);
     return (
         <>
             <h1>Best songs</h1>
@@ -40,22 +42,9 @@ export default function Slider({ userData }) {
                 className="mySwiper"
             >
                 {
-                    userData.list.map((e, i) => (
+                    trackList.list.map((e, i) => (
                         <SwiperSlide key={i}>
-                            <div className="profile-card-6"><img src="http://envato.jayasankarkr.in/code/profile/assets/img/profile-6.jpg" className="img img-responsive" alt="img" />
-                                <div className="profile-name"><BsHeart /> {e.username}
-                                </div>
-                                {/* <div className="profile-position">Lorem Ipsum Donor</div> */}
-                                <div className="profile-overview">
-                                    <div className="profile-overview">
-                                        <div className="row text-center">
-                                            <div className="col-sm">
-                                                <Button variant='link' onClick={() => console.log('holi')} className='text-decoration-none text-light'><FaRegPlayCircle /></Button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            <CardSmall e={e}/>
                         </SwiperSlide>
                     ))
                 }
