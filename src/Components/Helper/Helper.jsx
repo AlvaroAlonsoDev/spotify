@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 
 // redux
-import { fetchGetTracks, fetchGetUsers } from "../../Api/Api";
+import { fetchGetAlbums, fetchGetTracks, fetchGetUsers } from "../../Api/Api";
 import { useDispatch } from 'react-redux';
 
 
@@ -11,5 +11,6 @@ export const Helper = () => {
     useEffect(() => {
         fetchGetUsers(dispatch);
         fetchGetTracks(dispatch);
+        fetchGetAlbums(dispatch)
     }, [dispatch])
 }

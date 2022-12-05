@@ -1,36 +1,37 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
-import "../../index.css"
+import "../../../index.css"
 import { useSelector } from 'react-redux'
 import { Pagination } from "swiper";
-import CardSmall from "../Card/CardSmall/CardSmall";
 import { v4 as uuidv4 } from 'uuid';
+import CardBig from "../../Card/CardBig/CardBig";
 
 
-export default function Slider() {
+export default function SliderAlbums() {
 
-    const tracklist = useSelector(state => state.trackSlice);
+    const albumlist = useSelector(state => state.albumSlice);
+    console.log(albumlist.list)
 
     return (
         <>
             <Swiper
-                slidesPerView={2}
+                slidesPerView={1}
                 spaceBetween={12}
                 // pagination={{
                 //     clickable: true,
                 // }}
                 breakpoints={{
                     640: {
-                        slidesPerView: 2,
+                        slidesPerView: 1,
                         spaceBetween: 20,
                     },
                     768: {
-                        slidesPerView: 4,
+                        slidesPerView: 2,
                         spaceBetween: 40,
                     },
                     1024: {
-                        slidesPerView: 5,
+                        slidesPerView: 3,
                         spaceBetween: 50,
                     },
                 }}
@@ -42,11 +43,11 @@ export default function Slider() {
                 <div className="row">
 
 
-                    {tracklist.list.map((track) => {
+                    {albumlist.list.map((album) => {
                         return (
                             <SwiperSlide key={uuidv4()}>
-                                <CardSmall
-                                    track={track}
+                                <CardBig
+                                    album={album}
                                 />
                             </SwiperSlide>
                         )

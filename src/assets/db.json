@@ -331,60 +331,166 @@
     }
   ],
   "albums": [
-    [
-      {
-        "id": 1,
-        "name": "Flyga",
-        "tracks": [
-          {
-            "id": 1,
-            "name": "Better of alone",
-            "artist": "Kim Cesarion",
-            "url": "https://res.cloudinary.com/dmkdsujzh/video/upload/v1644583924/tracks-dev/Rxbyn_-_better_off_alone_fvhwp8.mp3",
-            "thumbnail": "https://res.cloudinary.com/dmkdsujzh/image/upload/v1644583757/tracks-thumbnails-dev/better_off_alone_gfmcby.jpg",
-            "genre": "piano",
-            "liked": false
-          },
-          {
-            "id": 2,
-            "name": "Alone",
-            "artist": "Color Out",
-            "url": "https://res.cloudinary.com/dmkdsujzh/video/upload/v1644583929/tracks-dev/Color_Out_-_Alone_aw3gmk.mp3",
-            "thumbnail": "https://res.cloudinary.com/dmkdsujzh/image/upload/v1644583757/tracks-thumbnails-dev/alone_rfib7a.jpg",
-            "genre": "poprock",
-            "liked": false
-          }
-        ],
-        "imageUrl": "https://i.scdn.co/image/ab67616d0000b273cfb34a37cfed6297d8c18231",
-        "artist": "Kim Cesarion"
-      },
-      {
-        "id": 2,
-        "name": "XXX (Bow Wow Wow)",
-        "tracks": [
-          {
-            "id": 1,
-            "name": "Better of alone",
-            "artist": "Kim Cesarion",
-            "url": "https://res.cloudinary.com/dmkdsujzh/video/upload/v1644583924/tracks-dev/Rxbyn_-_better_off_alone_fvhwp8.mp3",
-            "thumbnail": "https://res.cloudinary.com/dmkdsujzh/image/upload/v1644583757/tracks-thumbnails-dev/better_off_alone_gfmcby.jpg",
-            "genre": "piano",
-            "liked": false
-          },
-          {
-            "id": 2,
-            "name": "Alone",
-            "artist": "Color Out",
-            "url": "https://res.cloudinary.com/dmkdsujzh/video/upload/v1644583929/tracks-dev/Color_Out_-_Alone_aw3gmk.mp3",
-            "thumbnail": "https://res.cloudinary.com/dmkdsujzh/image/upload/v1644583757/tracks-thumbnails-dev/alone_rfib7a.jpg",
-            "genre": "poprock",
-            "liked": false
-          }
-        ],
-        "imageUrl": "https://i.scdn.co/image/ab67616d0000b273256e16efc88a39e4795d5f32",
-        "artist": "C.Gambino"
-      }
-    ]
+    {
+      "id": 1,
+      "name": "Flyga",
+      "tracks": [
+        {
+          "id": 1,
+          "name": "Better of alone",
+          "artist": "Kim Cesarion",
+          "url": "https://res.cloudinary.com/dmkdsujzh/video/upload/v1644583924/tracks-dev/Rxbyn_-_better_off_alone_fvhwp8.mp3",
+          "thumbnail": "https://res.cloudinary.com/dmkdsujzh/image/upload/v1644583757/tracks-thumbnails-dev/better_off_alone_gfmcby.jpg",
+          "genre": "piano",
+          "liked": false
+        },
+        {
+          "id": 2,
+          "name": "Alone",
+          "artist": "Color Out",
+          "url": "https://res.cloudinary.com/dmkdsujzh/video/upload/v1644583929/tracks-dev/Color_Out_-_Alone_aw3gmk.mp3",
+          "thumbnail": "https://res.cloudinary.com/dmkdsujzh/image/upload/v1644583757/tracks-thumbnails-dev/alone_rfib7a.jpg",
+          "genre": "poprock",
+          "liked": false
+        }
+      ],
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b273cfb34a37cfed6297d8c18231",
+      "artist": "Kim Cesarion"
+    },
+    {
+      "id": 2,
+      "name": "XXX (Bow Wow Wow)",
+      "tracks": [
+        {
+          "id": 1,
+          "name": "Better of alone",
+          "artist": "Kim Cesarion",
+          "url": "https://res.cloudinary.com/dmkdsujzh/video/upload/v1644583924/tracks-dev/Rxbyn_-_better_off_alone_fvhwp8.mp3",
+          "thumbnail": "https://res.cloudinary.com/dmkdsujzh/image/upload/v1644583757/tracks-thumbnails-dev/better_off_alone_gfmcby.jpg",
+          "genre": "piano",
+          "liked": false
+        },
+        {
+          "id": 2,
+          "name": "Alone",
+          "artist": "Color Out",
+          "url": "https://res.cloudinary.com/dmkdsujzh/video/upload/v1644583929/tracks-dev/Color_Out_-_Alone_aw3gmk.mp3",
+          "thumbnail": "https://res.cloudinary.com/dmkdsujzh/image/upload/v1644583757/tracks-thumbnails-dev/alone_rfib7a.jpg",
+          "genre": "poprock",
+          "liked": false
+        }
+      ],
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b273256e16efc88a39e4795d5f32",
+      "artist": "C.Gambino"
+    },
+    {
+      "id": 3,
+      "name": "Stay A Little Longer",
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b2732cf9821eb5087702a63330b5",
+      "artist": "Nicky Romero"
+    },
+    {
+      "id": 4,
+      "name": "WTF",
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b2730b7020f4bce3fc16f5370df3",
+      "artist": "Denz"
+    },
+    {
+      "id": 5,
+      "name": "Vivaldi",
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b273a7fc8699c8a8c6dc4b90c948",
+      "artist": "Jesper Swärd"
+    },
+    {
+      "id": 6,
+      "name": "Velvet Pony Trax 11 part 2",
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b27347d2bc41f459a0422c3dfff5",
+      "artist": "Axel Boman"
+    },
+    {
+      "id": 7,
+      "name": "PARTYPINGLA",
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b273e467c6a0b070f390daa47693",
+      "artist": "Rasmus Hultgren"
+    },
+    {
+      "id": 8,
+      "name": "Someone To Love",
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b273e9e5fbbde2d4147260db99bf",
+      "artist": "Dimitri Vangelis & Wyman"
+    },
+    {
+      "id": 9,
+      "name": "I samma bil",
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b27349108981b176704992078242",
+      "artist": "Hemliga Klubben"
+    },
+    {
+      "id": 10,
+      "name": "Ofiltrerad",
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b273d43759a300274388d5b3ac7d",
+      "artist": "Steph K"
+    },
+    {
+      "id": 11,
+      "name": "Closer",
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b273e04542a5b2f5c4e80b8043f9",
+      "artist": "Romeo"
+    },
+    {
+      "id": 12,
+      "name": "YOUNG",
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b27350414c15d3e534effd5840ab",
+      "artist": "SINAN"
+    },
+    {
+      "id": 13,
+      "name": "THE REAL",
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b273189b84e563687baf99c8d800",
+      "artist": "Chapee"
+    },
+    {
+      "id": 14,
+      "name": "Eternal Light Brigade",
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b2732f4d9bfec9c13fc7979ed942",
+      "artist": "Les Big Byrd"
+    },
+    {
+      "id": 15,
+      "name": "Tombolo (Réédition)",
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b273966b2b28801e75d7d293c3a9",
+      "artist": "Kalash"
+    },
+    {
+      "id": 16,
+      "name": "KARIMO II",
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b273aa311f30a24a7002e089c379",
+      "artist": "Karim Alger"
+    },
+    {
+      "id": 17,
+      "name": "Midnight FM",
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b273d62e4c88ec0df746317863af",
+      "artist": "Prof. Stranger"
+    },
+    {
+      "id": 18,
+      "name": "Jag såg en kvinna",
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b273897c8155c64e1436daf8a466",
+      "artist": "Ken Ring"
+    },
+    {
+      "id": 19,
+      "name": "Alltid varit här",
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b273940bcb3763667fa773d46a29",
+      "artist": "Rozh"
+    },
+    {
+      "id": 20,
+      "name": "38",
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b273a009515d20b39aa065540314",
+      "artist": "Arre"
+    }
   ],
   "artists": [
     [
