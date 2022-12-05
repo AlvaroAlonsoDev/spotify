@@ -9,15 +9,15 @@ import CardSmall from "../Card/CardSmall/CardSmall";
 import { v4 as uuidv4 } from 'uuid';
 
 
-export default function Slider({array, title}) {
+export default function Slider({ array, title, size, slidesPerView }) {
 
-    
+
     return (
         <>
             <h2 className="mt-4">{title}</h2>
             <Swiper
-                slidesPerView={2}
-                spaceBetween={12}
+                slidesPerView={slidesPerView}
+                spaceBetween={5}
                 // pagination={{
                 //     clickable: true,
                 // }}
@@ -47,6 +47,7 @@ export default function Slider({array, title}) {
 
                             <SwiperSlide key={uuidv4()}>
                                 <CardSmall
+                                    size = {size}
                                     track={track}
                                 />
                             </SwiperSlide>

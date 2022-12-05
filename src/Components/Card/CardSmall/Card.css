@@ -1,13 +1,26 @@
-.card {
-width: 11rem;
-border:none !important;
-
-
+.small {
+    width: 10rem;
+    border: none !important;
 }
-.card-title{
+
+.small img {
+    height: 10rem;
+}
+
+.medium {
+    width: 26rem;
+    border: none !important;
+}
+
+.medium img {
+    height: 11rem;
+    object-fit: cover;
+}
+
+.card-title {
     font-size: 1rem;
 }
 
-.card-body{
+.card-body {
     border: none;
 }

@@ -22,10 +22,12 @@ export const TopProfile = () => {
                 </div>
             </div>
             <div className='container'>
-            <Slider 
-            array={array}
-            title='My favorites songs'
-            />
+                <Slider
+                    slidesPerView={2}
+                    size='small'
+                    array={array}
+                    title='My favorites songs'
+                />
             </div>
         </>
     )
