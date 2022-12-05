@@ -1,0 +1,13 @@
+.card {
+width: 11rem;
+border:none !important;
+
+
+}
+.card-title{
+    font-size: 1rem;
+}
+
+.card-body{
+    border: none;
+}
