@@ -1,15 +1,37 @@
 
-import { useDispatch } from "react-redux"
-import CardSmall from "../Components/Card/CardSmall/CardSmall"
+import { useSelector } from "react-redux";
 import Slider from "../Components/Slider/Slider"
 
 const HomePage = () => {
-
+  const array = useSelector(state => state.trackSlice);
+  
   return (
     <>
-    <div className="container">
-      <Slider />
+      <div className="container minh">
+        <Slider 
+        array={array} 
+        title='No te lo puedes perder'
+        />
       </div>
+      <div className="container minh">
+        <Slider 
+        array={array} 
+        title='No te lo puedes perder'
+        />
+      </div>
+      <div className="container minh">
+        <Slider 
+        array={array} 
+        title='No te lo puedes perder'
+        />
+      </div>
+      <div className="container minh">
+        <Slider 
+        array={array} 
+        title='No te lo puedes perder'
+        />
+      </div>
+      
     </>
   )
 }

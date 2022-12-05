@@ -9,13 +9,12 @@ import CardSmall from "../Card/CardSmall/CardSmall";
 import { v4 as uuidv4 } from 'uuid';
 
 
-export default function Slider() {
+export default function Slider({array, title}) {
 
-    const tracklist = useSelector(state => state.trackSlice);
-    console.log(tracklist.list)
-
+    
     return (
         <>
+            <h2 className="mt-4">{title}</h2>
             <Swiper
                 slidesPerView={2}
                 spaceBetween={12}
@@ -40,19 +39,18 @@ export default function Slider() {
                 className="mySwiper"
             >
 
-
                 <div className="row">
 
-                    {tracklist.list.map((track) => {
+                    {array.list.map((track) => {
 
                         return (
-                       
-                                <SwiperSlide key={uuidv4()}>
-                                    <CardSmall
-                                        track={track}
-                                    />
-                                </SwiperSlide>
-                               
+
+                            <SwiperSlide key={uuidv4()}>
+                                <CardSmall
+                                    track={track}
+                                />
+                            </SwiperSlide>
+
                         )
 
                     })}
