@@ -12,7 +12,7 @@ const ModalLogin = () => {
     const [show, setShow] = useState(false);
     const usersData = useSelector(state => state.userSlice);
     const dispatch = useDispatch();
-    console.log(usersData.isLogged);
+
     function handleShow(v) {
         setFullscreen(v);
         setShow(true);

@@ -21,11 +21,14 @@ export const userSlice = createSlice({
         setLogout: (state) => {
             state.isLogged = false
             state.userLogged = null
+        },
+        setUserRegister: (state, action) => {
+            state.list = [...state.list, action.payload];
         }
     },
 });
 
-export const { setUserList, setUserLogged, setIsLogged, setLogout } = userSlice.actions;
+export const { setUserList, setUserLogged, setIsLogged, setLogout, setUserRegister } = userSlice.actions;
 
 export default userSlice.reducer;
 

@@ -1,6 +1,7 @@
 import Navbar from 'react-bootstrap/Navbar';
 import ModalLogin from '../Modals/ModalLogin/ModalLogin';
 import ModalAside from '../Modals/ModalAside/ModalAside';
+import ModalRegister from '../Modals/ModalRegister/ModalRegister';
 
 
 export function Header() {
@@ -13,6 +14,7 @@ export function Header() {
                 <Navbar.Toggle />
 
                 <Navbar.Collapse className="justify-content-end">
+                    <ModalRegister />
                     <ModalLogin />
                 </Navbar.Collapse>
         </Navbar>
