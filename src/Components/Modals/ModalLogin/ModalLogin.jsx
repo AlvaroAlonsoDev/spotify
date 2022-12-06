@@ -11,6 +11,7 @@ const ModalLogin = () => {
     const [fullscreen, setFullscreen] = useState(true);
     const [show, setShow] = useState(false);
     const usersData = useSelector(state => state.userSlice);
+    const [error, setError] = useState(null);
     const dispatch = useDispatch();
 
     function handleShow(v) {
@@ -25,13 +26,17 @@ const ModalLogin = () => {
             password: e.target.password.value
         }
         const checkUser = (usersData.list).find((user) => user.email === loginUser.email)
-        if (checkUser && checkUser.password === loginUser.password) {
-            console.log('Credenciales correctas');
-            dispatch(setUserLogged(checkUser));
-            dispatch(setIsLogged(true));
-            setShow(false);
+        if (checkUser) {
+            if (checkUser.password === loginUser.password) {
+                dispatch(setUserLogged(checkUser));
+                dispatch(setIsLogged(true));
+                setShow(false);
+                setError(null);
+            } else {
+                setError('Password incorrect');
+            }
         } else {
-            console.log('Email incorrecto');
+            setError('Email incorrect');
         }
     }
 
@@ -71,7 +76,7 @@ const ModalLogin = () => {
                             Submit
                         </Button>
                     </Form>
-
+                    <p>{error}</p>
                 </Modal.Body>
             </Modal>
         </>

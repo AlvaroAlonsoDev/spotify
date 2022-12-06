@@ -3,7 +3,7 @@ import { Modal } from "react-bootstrap";
 import { MainBtn } from "../../Buttons/MainBtn/MainBtn";
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { setUserRegister } from "../../../redux/features/user/userSlice";
 import { v4 as uuidv4 } from 'uuid';
 import { fetchRegisterUsers } from "../../../Api/ApiPost";
@@ -12,6 +12,8 @@ import { fetchRegisterUsers } from "../../../Api/ApiPost";
 const ModalRegister = () => {
     const [fullscreen, setFullscreen] = useState(true);
     const [show, setShow] = useState(false);
+    const [error, setError] = useState(null);
+    const usersData = useSelector(state => state.userSlice);
     const dispatch = useDispatch();
 
     function handleShow(v) {
@@ -28,10 +30,15 @@ const ModalRegister = () => {
             address: e.target.address.value
         }
 
-        if (registerUser) {
+        const checkUserExist = (usersData.list).find((user) => user.email === registerUser.email);
+
+        if (registerUser && !checkUserExist) {
             fetchRegisterUsers(registerUser);
             dispatch(setUserRegister(registerUser));
             setShow(false);
+            setError(null);
+        } else {
+            setError('Email already exists');
         }
     }
 
@@ -66,6 +73,7 @@ const ModalRegister = () => {
                         <Button variant="primary" type="submit">
                             Submit
                         </Button>
+                    <p>{error}</p>
                     </Form>
 
                 </Modal.Body>

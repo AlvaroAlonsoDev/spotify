@@ -2,9 +2,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "../../index.css"
-import { useSelector } from 'react-redux'
 import { Pagination } from "swiper";
-import CardSmall from "../Card/CardSmall/CardSmall";
+import Card from "../Card/Card";
 import { v4 as uuidv4 } from 'uuid';
 
 
@@ -31,7 +30,7 @@ export default function Slider({ array, title, size, slidesPerView, img, breakpo
                     {array.list.map((data) => {
                         return (
                             <SwiperSlide key={uuidv4()}>
-                                <CardSmall
+                                <Card
                                     data={data}
                                     size={size}
                                     img={img}

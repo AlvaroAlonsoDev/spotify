@@ -1,6 +1,5 @@
 import { useSelector } from "react-redux"
 import Slider from "../Components/Slider/Slider"
-import SliderAlbums from "../Components/Slider/SliderAlbums/SliderAlbums"
 
 const HomePage = () => {
 

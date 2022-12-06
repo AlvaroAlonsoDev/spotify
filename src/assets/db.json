@@ -316,18 +316,6 @@
       ],
       "profilePicture": "https://robohash.org/suntvoluptasnisi.png?size=50x50&set=set1",
       "isLoggedin": false
-    },
-    {
-      "id": "e8946994-efb1-48c4-8830-142168da21d6",
-      "email": "hola@hola",
-      "password": "1234",
-      "address": "1234"
-    },
-    {
-      "id": "cdea8743-0150-464d-a09b-63f51787a767",
-      "email": "hola@hola12",
-      "password": "1234",
-      "address": "1234"
     }
   ],
   "albums": [

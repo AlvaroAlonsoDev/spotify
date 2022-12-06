@@ -1,6 +1,5 @@
 // axios
 import axios from "axios";
-import { setUserRegister } from "../redux/features/user/userSlice";
 
 export const fetchRegisterUsers = (registerUser) => {
     axios
