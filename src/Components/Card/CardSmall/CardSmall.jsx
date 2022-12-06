@@ -1,8 +1,11 @@
-import React from 'react'
 import './Card.css';
+import Player from '../../Player/Player';
 
 const CardSmall = ({ track, size }) => {
 
+    const prueba = (song) => {
+        return <Player track={song} />
+    }
 
     return (
         <div className={size} >
@@ -10,6 +13,7 @@ const CardSmall = ({ track, size }) => {
             <div className="card-text card-body">
                 <h5 className="card-title">{track.name}</h5>
                 <p className="card-text">{track.artist}</p>
+                <button onClick={() => prueba(track.url)}>play</button>
             </div>
         </div>
     )
