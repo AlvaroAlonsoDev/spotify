@@ -1,9 +1,8 @@
-
 import { useState } from 'react';
 import { Modal } from 'react-bootstrap';
 import { RxHamburgerMenu } from "react-icons/rx"
-import { Link } from 'react-router-dom';
 import { MainBtn } from '../../Buttons/MainBtn/MainBtn';
+import { Link } from 'react-router-dom';
 
 const ModalAside = () => {
 
@@ -16,7 +15,12 @@ const ModalAside = () => {
 
     return (
         <>
-            <MainBtn name={<RxHamburgerMenu />} openModal={handleShow} />
+            <MainBtn
+                name={<RxHamburgerMenu />}
+                openModal={handleShow}
+                className='text-dark'
+                variant='link'
+            />
 
             <Modal className='p-0' show={show} fullscreen={fullscreen} onHide={() => setShow(false)}>
                 <Modal.Header closeButton>
@@ -28,7 +32,8 @@ const ModalAside = () => {
                         <li>Listen now </li>
                         <li>Browse</li>
                         <li>Radio</li>
-                        <Link to='/profile'>Profile</Link>
+                        <li><Link to='/profile'>Profile</Link></li>
+                        <li>Por ejemplo... xd</li>
                     </ul>
                 </Modal.Body>
             </Modal>

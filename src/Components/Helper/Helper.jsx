@@ -9,7 +9,8 @@ export const Helper = () => {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        fetchGetUsers(dispatch);
+        dispatch(fetchGetUsers());
         fetchGetTracks(dispatch);
     }, [dispatch])
+
 }

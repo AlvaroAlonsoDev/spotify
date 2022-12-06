@@ -1,77 +1,85 @@
 import { useState } from "react";
 import { Modal } from "react-bootstrap";
 import { MainBtn } from "../../Buttons/MainBtn/MainBtn";
-import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
-import { useDispatch, useSelector } from "react-redux";
-import { setUserLogged, setIsLogged, setLogout } from "../../../redux/features/user/userSlice";
+
+// redux
+import { useDispatch, useSelector } from 'react-redux';
+import { ModalRecoveryPassword } from "../ModalRecoveryPassword/ModalRecoveryPassword";
+import { ModalRegister } from "../ModalRegister/ModalRegister";
+import { IoIosArrowBack } from "react-icons/io";
+import { functionLogin } from "../../../Api/Api";
 
 
 const ModalLogin = () => {
     const [fullscreen, setFullscreen] = useState(true);
     const [show, setShow] = useState(false);
-    const usersData = useSelector(state => state.userSlice);
+    const userData = useSelector(state => state.userSlice);
     const dispatch = useDispatch();
 
     function handleShow(v) {
         setFullscreen(v);
         setShow(true);
     }
-
     const login = (e) => {
-        e.preventDefault();
-        const loginUser = {
-            email: e.target.email.value,
-            password: e.target.password.value
-        }
-        const checkUser = (usersData.list).find((user) => user.email === loginUser.email)
-        if (checkUser && checkUser.password === loginUser.password) {
-            console.log('Credenciales correctas');
-            dispatch(setUserLogged(checkUser));
-            dispatch(setIsLogged(true));
-            setShow(false);
-        } else {
-            console.log('Email incorrecto');
-        }
-    }
+        e.preventDefault()
 
-    const logout = () => {
-        dispatch(setLogout());
-    }
+        //POST al backend
+        functionLogin(e, userData, dispatch, setShow)
+        setShow(false);
 
+    }
     return (
         <>
-            {usersData.isLogged ? <button onClick={logout}>Logout</button> : <MainBtn
-                name='login'
-                openModal={handleShow}
-            />}
+                <MainBtn
+                    name='Login'
+                    className='btn__login--home btn-lg text-decoration-none'
+                    openModal={handleShow}
+                    variant='link'
+                />
 
-            <Modal className='p-0' show={show} fullscreen={fullscreen} onHide={() => setShow(false)}>
-                <Modal.Header closeButton>
-                    <Modal.Title>Login</Modal.Title>
+
+            <Modal show={show} fullscreen={fullscreen} onHide={() => setShow(false)}>
+                <Modal.Header>
+                    <Modal.Title>
+                        <IoIosArrowBack onClick={() => setShow(false)} className='' />
+                    </Modal.Title>
                 </Modal.Header>
-                <Modal.Body>
-                    <Form onSubmit={(e) => login(e)}>
-                        <Form.Group className="mb-3" controlId="formBasicEmail">
-                            <Form.Label>Email address</Form.Label>
-                            <Form.Control type="email" placeholder="Enter email" name="email" />
-                            <Form.Text className="text-muted">
-                                We'll never share your email with anyone else.
-                            </Form.Text>
-                        </Form.Group>
+                <Modal.Body >
+                    <div className='container'>
+                        <div className='m-4 row'>
+                            <h1 className='text-center'>Sign</h1>
+                            <p className='text-center'>You will get access to all your songs and playlists.</p>
+                        </div>
+                        <form onSubmit={e => login(e)} className="needs-validation">
+                            <div className="row g-3">
 
-                        <Form.Group className="mb-3" controlId="formBasicPassword">
-                            <Form.Label>Password</Form.Label>
-                            <Form.Control type="password" placeholder="Password" name="password" />
-                        </Form.Group>
-                        <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                            <Form.Check type="checkbox" label="Check me out" />
-                        </Form.Group>
-                        <Button variant="primary" type="submit">
-                            Submit
-                        </Button>
-                    </Form>
+                                <div className="form-floating mb-3">
+                                    <input type="email" name="email" className="form-control" id="floatingInput" placeholder="name@example.com" />
+                                    <label htmlFor="floatingInput">Email address</label>
+                                </div>
 
+                                <div className="form-floating mb-3">
+                                    <input type="password" name="password" className="form-control" id="floatingPassword" placeholder="Password" />
+                                    <label htmlFor="floatingPassword">Password</label>
+                                </div>
+
+                                <div className="form-check m-2 mb-3">
+                                    <input className="form-check-input" type="checkbox" value="" id="rememberPasswordCheck" />
+                                    <label className="form-check-label" htmlFor="rememberPasswordCheck">
+                                        Remember password
+                                    </label>
+                                </div>
+                            </div>
+
+
+                            <button className="mt-2 w-100 btn btn-primary btn-lg" type="submit">Log in</button>
+
+                        </form>
+                        <div className="mt-4 row">
+                            <ModalRegister />
+                            <ModalRecoveryPassword setShow={setShow} />
+                        </div>
+                    </div>
                 </Modal.Body>
             </Modal>
         </>

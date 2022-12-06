@@ -1,15 +1,14 @@
+// redux
+import { useDispatch } from 'react-redux';
+
+
 import { useState } from "react";
-import { Modal } from "react-bootstrap";
-import { MainBtn } from "../../Buttons/MainBtn/MainBtn";
-import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
-import { useDispatch } from "react-redux";
-import { setUserRegister } from "../../../redux/features/user/userSlice";
-import { v4 as uuidv4 } from 'uuid';
-import { fetchRegisterUsers } from "../../../Api/ApiPost";
+import { Button, Modal } from "react-bootstrap";
+import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
+import { functionRegister } from "../../../Api/postApi";
 
 
-const ModalRegister = () => {
+export const ModalRegister = () => {
     const [fullscreen, setFullscreen] = useState(true);
     const [show, setShow] = useState(false);
     const dispatch = useDispatch();
@@ -18,60 +17,57 @@ const ModalRegister = () => {
         setFullscreen(v);
         setShow(true);
     }
-
     const register = (e) => {
         e.preventDefault();
-        const registerUser = {
-            id: uuidv4(),
-            email: e.target.email.value,
-            password: e.target.password.value,
-            address: e.target.address.value
-        }
 
-        if (registerUser) {
-            fetchRegisterUsers(registerUser);
-            dispatch(setUserRegister(registerUser));
-            setShow(false);
-        }
+        // Call backend
+        functionRegister(e, dispatch, setShow);
     }
-
     return (
         <>
-            <MainBtn
-                name='register'
-                openModal={handleShow}
-            />
+            <Button variant='link' onClick={handleShow} className='text-decoration-none'>Create New YouMusic ID <IoIosArrowForward /></Button>
 
             <Modal className='p-0' show={show} fullscreen={fullscreen} onHide={() => setShow(false)}>
-                <Modal.Header closeButton>
-                    <Modal.Title>Register</Modal.Title>
+                <Modal.Header>
+                    <Modal.Title><IoIosArrowBack onClick={() => setShow(false)} className='' /></Modal.Title>
+                    <Modal.Title>YouMusic</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                    <Form onSubmit={(e) => register(e)}>
-                        <Form.Group className="mb-3" controlId="formBasicEmail">
-                            <Form.Label>Email address</Form.Label>
-                            <Form.Control type="email" placeholder="Enter email" name="email" />
-                        </Form.Group>
+                    <div className='m-4 row'><h1 className='text-center'>Create ID</h1></div>
+                    <div className='container'>
+                        <form onSubmit={e => register(e)} className="needs-validation">
+                            <div className="row g-3">
 
-                        <Form.Group className="mb-3" controlId="formBasicPassword">
-                            <Form.Label>Password</Form.Label>
-                            <Form.Control type="password" placeholder="Password" name="password" />
-                        </Form.Group>
+                                <div className="form-floating mb-3">
+                                    <input type="text" name="username" className="form-control" id="floatingInput" placeholder="name@example.com" />
+                                    <label htmlFor="floatingInput">Username</label>
+                                </div>
 
-                        <Form.Group className="mb-3" controlId="formBasicAddress">
-                            <Form.Label>Address</Form.Label>
-                            <Form.Control type="address" placeholder="Address" name="address" />
-                        </Form.Group>
+                                <div className="form-floating mb-3">
+                                    <input type="email" name="email" className="form-control" id="floatingInput" placeholder="name@example.com" autoFocus />
+                                    <label htmlFor="floatingInput">Email address</label>
+                                </div>
 
-                        <Button variant="primary" type="submit">
-                            Submit
-                        </Button>
-                    </Form>
+                                <div className="form-floating mb-3">
+                                    <input type="password" name="password" className="form-control" id="floatingPassword" placeholder="Password" />
+                                    <label htmlFor="floatingPassword">Password</label>
+                                </div>
+                            </div>
 
+                            <div className="form-check">
+                                <input className="form-check-input" type="checkbox" value="" id="defaultCheck1" required />
+                                <label className="form-check-label" htmlFor="defaultCheck1">
+                                    Agree to Terms & Conditions
+                                </label>
+                            </div>
+                            <button className="mt-4 w-100 btn btn-primary btn-lg" type="submit">Log in</button>
+                        </form>
+                    </div>
                 </Modal.Body>
+                <Modal.Footer>
+
+                </Modal.Footer>
             </Modal>
         </>
     )
 }
-
-export default ModalRegister
