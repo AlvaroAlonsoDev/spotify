@@ -3,16 +3,16 @@ import AudioPlayer from 'react-h5-audio-player';
 import 'react-h5-audio-player/lib/styles.css';
 
 const Player = () => {
-  return (
-    <>
-    <AudioPlayer
-    autoPlay
-    src="http://example.com/audio.mp3"
-    onPlay={e => console.log("onPlay")}
-    // other props here
-  />
-  </>
-  )
+    return (
+        <div className='fixfooter'>
+            <AudioPlayer
+                autoPlay
+                src="http://example.com/audio.mp3"
+                onPlay={e => console.log("onPlay")}
+            // other props here
+            />
+        </div>
+    )
 }
 
 export default Player
