@@ -10,7 +10,7 @@ const Player = ({track}) => {
                 autoPlay
                 src={track}
                 onPlay={e => console.log("onPlay")}
-            // other props here
+            // another props here
             />
         </div>
     )

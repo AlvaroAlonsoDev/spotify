@@ -9,7 +9,7 @@ export function Header() {
     const usersData = useSelector(state => state.userSlice)
 
     return (
-        <Navbar className='shadow-sm bg-body rounded'>
+        <Navbar className='shadow-sm bg-body header'>
             <Navbar.Brand className='ms-2'>
                 <ModalAside />
             </Navbar.Brand>
