@@ -8,32 +8,18 @@ import CardSmall from "../Card/CardSmall/CardSmall";
 import { v4 as uuidv4 } from 'uuid';
 
 
-export default function Slider() {
-
-    const tracklist = useSelector(state => state.trackSlice);
+export default function Slider({ array, title, size, slidesPerView, img, breakpoints }) {
 
     return (
         <>
+            <h2>{title}</h2>
             <Swiper
-                slidesPerView={2}
+                slidesPerView={slidesPerView}
                 spaceBetween={12}
                 // pagination={{
                 //     clickable: true,
                 // }}
-                breakpoints={{
-                    640: {
-                        slidesPerView: 2,
-                        spaceBetween: 20,
-                    },
-                    768: {
-                        slidesPerView: 4,
-                        spaceBetween: 40,
-                    },
-                    1024: {
-                        slidesPerView: 5,
-                        spaceBetween: 50,
-                    },
-                }}
+                breakpoints={breakpoints}
                 modules={[Pagination]}
                 className="mySwiper"
             >
@@ -42,11 +28,15 @@ export default function Slider() {
                 <div className="row">
 
 
-                    {tracklist.list.map((track) => {
+                    {array.list.map((data) => {
                         return (
                             <SwiperSlide key={uuidv4()}>
                                 <CardSmall
-                                    track={track}
+                                    data={data}
+                                    size={size}
+                                    img={img}
+                                    slidesPerView={slidesPerView}
+                                    breakpoints={breakpoints}
                                 />
                             </SwiperSlide>
                         )

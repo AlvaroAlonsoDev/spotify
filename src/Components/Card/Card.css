@@ -1,15 +1,22 @@
-.cardSmall {
+.small {
     width: 11rem;
     border: none !important;
 }
 
-.cardBig {
+.img__small {
+    width: 15rem;
+    height: 11rem;
+    object-fit: cover;
+}
+
+.big {
     width: 26rem;
     border: none !important;
 }
 
-.card-img-big {
-    height: 11rem;
+.img__big {
+    width: 32rem;
+    height: 10rem;
     object-fit: cover;
 }
 
