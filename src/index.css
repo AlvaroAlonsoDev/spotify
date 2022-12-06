@@ -1,3 +1,11 @@
+body {
+        /* margin: 0px; */
+        max-width: 100vw;
+        /* height: 100vh; */
+        font-family: sans-serif;
+        /* color: white; */
+}
+
 .fixfooter {
         position: fixed;
         left: 0;
@@ -5,4 +13,34 @@
         width: 100%;
         text-align: center;
         z-index: 1;
+}
+
+
+.grid-center {
+        display: grid;
+        place-items: center;
+}
+
+.item {
+        background-color: aquamarine;
+        height: 150px;
+        width: 150px;
+}
+
+.swiper {
+        width: 600px;
+        height: 300px;
+}
+
+.dropdown-toggle::after {
+        content: none !important;
+}
+
+.dropdown-menu[data-bs-popper] {
+        right: 0;
+        left: auto !important;
+}
+
+.icon {
+        font-size: 2rem;
 }
