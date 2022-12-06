@@ -19,7 +19,7 @@ export const ModalRegister = () => {
     }
     const register = (e) => {
         e.preventDefault();
-
+        setShow(false)
         // Call backend
         functionRegister(e, dispatch, setShow);
     }
@@ -29,7 +29,7 @@ export const ModalRegister = () => {
 
             <Modal className='p-0' show={show} fullscreen={fullscreen} onHide={() => setShow(false)}>
                 <Modal.Header>
-                    <Modal.Title><IoIosArrowBack onClick={() => setShow(false)} className='' /></Modal.Title>
+                    <Modal.Title><IoIosArrowBack onClick={() => setShow(false)} className='cursor-pointer' /></Modal.Title>
                     <Modal.Title>YouMusic</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>

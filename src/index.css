@@ -51,3 +51,12 @@ body {
 .navbar {
         width: 100vw;
 }
+
+.btn-color {
+        background-color: #1C796E !important;
+        color: white !important;
+}
+
+.cursor-pointer {
+        cursor: pointer;
+}

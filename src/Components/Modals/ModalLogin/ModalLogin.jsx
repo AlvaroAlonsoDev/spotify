@@ -22,11 +22,9 @@ const ModalLogin = () => {
     }
     const login = (e) => {
         e.preventDefault()
-
         //POST al backend
         functionLogin(e, userData, dispatch, setShow)
         setShow(false);
-
     }
     return (
         <>
@@ -41,7 +39,7 @@ const ModalLogin = () => {
             <Modal show={show} fullscreen={fullscreen} onHide={() => setShow(false)}>
                 <Modal.Header>
                     <Modal.Title>
-                        <IoIosArrowBack onClick={() => setShow(false)} className='' />
+                        <IoIosArrowBack onClick={() => setShow(false)} className='cursor-pointer' />
                     </Modal.Title>
                 </Modal.Header>
                 <Modal.Body >
@@ -52,7 +50,6 @@ const ModalLogin = () => {
                         </div>
                         <form onSubmit={e => login(e)} className="needs-validation">
                             <div className="row g-3">
-
                                 <div className="form-floating mb-3">
                                     <input type="email" name="email" className="form-control" id="floatingInput" placeholder="name@example.com" />
                                     <label htmlFor="floatingInput">Email address</label>
@@ -62,17 +59,8 @@ const ModalLogin = () => {
                                     <input type="password" name="password" className="form-control" id="floatingPassword" placeholder="Password" />
                                     <label htmlFor="floatingPassword">Password</label>
                                 </div>
-
-                                <div className="form-check m-2 mb-3">
-                                    <input className="form-check-input" type="checkbox" value="" id="rememberPasswordCheck" />
-                                    <label className="form-check-label" htmlFor="rememberPasswordCheck">
-                                        Remember password
-                                    </label>
-                                </div>
                             </div>
-
-
-                            <button className="mt-2 w-100 btn btn-light btn-lg" type="submit">Log in</button>
+                            <button className="mt-2 w-100 btn btn-color btn-lg" type="submit">Log in</button>
 
                         </form>
                         <div className="mt-4 row">

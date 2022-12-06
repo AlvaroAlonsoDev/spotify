@@ -4,6 +4,8 @@ import Player from '../../Player/Player';
 const CardSmall = ({ track, size }) => {
 
     const prueba = (song) => {
+        console.log('estas en la funcion prueba');
+        
         return <Player track={song} />
     }
 

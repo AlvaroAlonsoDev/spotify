@@ -261,9 +261,7 @@
           "artist": "Color Out",
           "url": "https://res.cloudinary.com/dmkdsujzh/video/upload/v1644583929/tracks-dev/Color_Out_-_Alone_aw3gmk.mp3",
           "thumbnail": "https://res.cloudinary.com/dmkdsujzh/image/upload/v1644583757/tracks-thumbnails-dev/alone_rfib7a.jpg",
-          "genre": "poprock",
-          "liked": true
-          
+          "genre": "poprock"
         }
       ]
     },
@@ -289,8 +287,7 @@
               "artist": "RXBYN",
               "url": "https://res.cloudinary.com/dmkdsujzh/video/upload/v1644583924/tracks-dev/Rxbyn_-_better_off_alone_fvhwp8.mp3",
               "thumbnail": "https://res.cloudinary.com/dmkdsujzh/image/upload/v1644583757/tracks-thumbnails-dev/better_off_alone_gfmcby.jpg",
-              "genre": "piano",
-              "liked": false
+              "genre": "piano"
             },
             {
               "id": 2,
@@ -298,8 +295,7 @@
               "artist": "Color Out",
               "url": "https://res.cloudinary.com/dmkdsujzh/video/upload/v1644583929/tracks-dev/Color_Out_-_Alone_aw3gmk.mp3",
               "thumbnail": "https://res.cloudinary.com/dmkdsujzh/image/upload/v1644583757/tracks-thumbnails-dev/alone_rfib7a.jpg",
-              "genre": "poprock",
-              "liked": false
+              "genre": "poprock"
             }
           ],
           "primaryColor": "#fbdc00"
@@ -312,12 +308,10 @@
           "artist": "Color Out",
           "url": "https://res.cloudinary.com/dmkdsujzh/video/upload/v1644583929/tracks-dev/Color_Out_-_Alone_aw3gmk.mp3",
           "thumbnail": "https://res.cloudinary.com/dmkdsujzh/image/upload/v1644583757/tracks-thumbnails-dev/alone_rfib7a.jpg",
-          "genre": "poprock",
-          "liked": true
+          "genre": "poprock"
         }
       ],
-      "profilePicture": "https://robohash.org/suntvoluptasnisi.png?size=50x50&set=set1",
-      "isLoggedin": false
+      "profilePicture": "https://robohash.org/suntvoluptasnisi.png?size=50x50&set=set1"
     }
   ],
   "albums": [
@@ -331,8 +325,7 @@
           "artist": "Kim Cesarion",
           "url": "https://res.cloudinary.com/dmkdsujzh/video/upload/v1644583924/tracks-dev/Rxbyn_-_better_off_alone_fvhwp8.mp3",
           "thumbnail": "https://res.cloudinary.com/dmkdsujzh/image/upload/v1644583757/tracks-thumbnails-dev/better_off_alone_gfmcby.jpg",
-          "genre": "piano",
-          "liked": false
+          "genre": "piano"
         },
         {
           "id": 2,
@@ -340,8 +333,7 @@
           "artist": "Color Out",
           "url": "https://res.cloudinary.com/dmkdsujzh/video/upload/v1644583929/tracks-dev/Color_Out_-_Alone_aw3gmk.mp3",
           "thumbnail": "https://res.cloudinary.com/dmkdsujzh/image/upload/v1644583757/tracks-thumbnails-dev/alone_rfib7a.jpg",
-          "genre": "poprock",
-          "liked": false
+          "genre": "poprock"
         }
       ],
       "imageUrl": "https://i.scdn.co/image/ab67616d0000b273cfb34a37cfed6297d8c18231",
@@ -357,8 +349,7 @@
           "artist": "Kim Cesarion",
           "url": "https://res.cloudinary.com/dmkdsujzh/video/upload/v1644583924/tracks-dev/Rxbyn_-_better_off_alone_fvhwp8.mp3",
           "thumbnail": "https://res.cloudinary.com/dmkdsujzh/image/upload/v1644583757/tracks-thumbnails-dev/better_off_alone_gfmcby.jpg",
-          "genre": "piano",
-          "liked": false
+          "genre": "piano"
         },
         {
           "id": 2,
@@ -366,8 +357,7 @@
           "artist": "Color Out",
           "url": "https://res.cloudinary.com/dmkdsujzh/video/upload/v1644583929/tracks-dev/Color_Out_-_Alone_aw3gmk.mp3",
           "thumbnail": "https://res.cloudinary.com/dmkdsujzh/image/upload/v1644583757/tracks-thumbnails-dev/alone_rfib7a.jpg",
-          "genre": "poprock",
-          "liked": false
+          "genre": "poprock"
         }
       ],
       "imageUrl": "https://i.scdn.co/image/ab67616d0000b273256e16efc88a39e4795d5f32",
