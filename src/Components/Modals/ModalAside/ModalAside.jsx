@@ -24,16 +24,15 @@ const ModalAside = () => {
 
             <Modal className='p-0' show={show} fullscreen={fullscreen} onHide={() => setShow(false)}>
                 <Modal.Header closeButton>
-                    <Modal.Title>Aside Modal</Modal.Title>
+                    <Modal.Title>YouMusic</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                    <p>Aqui van funcionalidades para el usuario</p>
                     <ul>
+                        <li><Link to='/profile'>Profile</Link></li>
+                        <li>Buscador</li>
                         <li>Listen now </li>
                         <li>Browse</li>
                         <li>Radio</li>
-                        <li><Link to='/profile'>Profile</Link></li>
-                        <li>Por ejemplo... xd</li>
                     </ul>
                 </Modal.Body>
             </Modal>

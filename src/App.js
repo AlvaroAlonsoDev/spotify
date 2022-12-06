@@ -14,7 +14,9 @@ function App() {
       <Helper />
       <Header />
       <AppRouter />
-      <div className="fixfooter">{isLogged ? <Player /> : null}</div>
+      <div className="fixfooter">
+        {isLogged ? <Player /> : null}
+      </div>
 
     </>
   );

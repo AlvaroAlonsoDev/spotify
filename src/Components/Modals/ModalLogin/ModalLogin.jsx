@@ -72,7 +72,7 @@ const ModalLogin = () => {
                             </div>
 
 
-                            <button className="mt-2 w-100 btn btn-primary btn-lg" type="submit">Log in</button>
+                            <button className="mt-2 w-100 btn btn-light btn-lg" type="submit">Log in</button>
 
                         </form>
                         <div className="mt-4 row">
