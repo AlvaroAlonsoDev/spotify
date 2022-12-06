@@ -46,13 +46,12 @@ export default function Slider() {
                     {tracklist.list.map((track) => {
 
                         return (
-                       
-                                <SwiperSlide key={uuidv4()}>
-                                    <CardSmall
-                                        track={track}
-                                    />
-                                </SwiperSlide>
-                               
+
+                            <SwiperSlide key={uuidv4()}>
+                                <CardSmall
+                                    track={track}
+                                />
+                            </SwiperSlide>
                         )
 
                     })}
