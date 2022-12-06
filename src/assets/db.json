@@ -212,14 +212,17 @@
       "genre": "folk"
     }
   ],
-  "user": [
+  "users": [
     {
       "id": 1,
-      "username": "Assembler",
-      "first_name": "Assembler",
-      "last_name": "Institute",
-      "email": "music@assemblerschool.com",
-      "password": "123",
+      "userData": {
+        "username": "Assembler",
+        "first_name": "Assembler",
+        "last_name": "Institute",
+        "email": "music@assemblerschool.com",
+        "password": "123",
+        "profilePicture": "https://robohash.org/suntvoluptasnisi.png?size=50x50&set=set1"
+      },
       "playlists": [
         {
           "id": 1,
@@ -261,17 +264,15 @@
           "genre": "poprock",
           "liked": true
         }
-      ],
-      "profilePicture": "https://robohash.org/suntvoluptasnisi.png?size=50x50&set=set1",
-      "isLoggedin": false
+      ]
     },
     {
       "id": 2,
       "username": "Lidiia",
       "first_name": "Lidia",
       "last_name": "Frias",
-      "email": "lidia@lidia.com",
-      "password": "1234",
+      "email": "lidia@gmail.com",
+      "password": "123",
       "playlists": [
         {
           "id": 1,
