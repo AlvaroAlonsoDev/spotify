@@ -1,7 +1,5 @@
 
-import { useDispatch } from "react-redux"
-import CardSmall from "../Components/Card/CardSmall/CardSmall"
-import Player from "../Components/Player/Player"
+import { useSelector } from "react-redux"
 import Slider from "../Components/Slider/Slider"
 
 const HomePage = () => {
@@ -12,6 +10,14 @@ const HomePage = () => {
     <>
       <div className="container minh">
         <Slider 
+        slidesPerView={1}
+        size='medium'
+        array={usersData} 
+        title='Lista de usuarios'
+        />
+      </div>
+      <div className="container minh">
+        <Slider 
         slidesPerView={2}
         size='small'
         array={tracks} 
@@ -20,13 +26,37 @@ const HomePage = () => {
       </div>
       <div className="container minh">
         <Slider 
-        slidesPerView={1}
-        size='medium'
-        array={usersData} 
-        title='Lista de usuarios'
+        slidesPerView={2}
+        size='small'
+        array={tracks} 
+        title='No te lo puedes perder'
         />
       </div>
-      <Player />
+      <div className="container minh">
+        <Slider 
+        slidesPerView={2}
+        size='small'
+        array={tracks} 
+        title='No te lo puedes perder'
+        />
+      </div>
+      <div className="container minh">
+        <Slider 
+        slidesPerView={2}
+        size='small'
+        array={tracks} 
+        title='No te lo puedes perder'
+        />
+      </div>
+      <div className="container minh">
+        <Slider 
+        slidesPerView={2}
+        size='small'
+        array={tracks} 
+        title='No te lo puedes perder'
+        />
+      </div>
+      
     </>
   )
 }
