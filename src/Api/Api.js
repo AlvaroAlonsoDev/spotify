@@ -2,11 +2,11 @@
 import axios from "axios";
 import { setAlbumsList } from "../redux/features/albums/albumsSlice";
 import { setTracksList } from "../redux/features/tracks/tracksSlice";
-import { setUserList } from "../redux/features/user/userSlice";
+import { setUserLikedTrack, setUserList } from "../redux/features/user/userSlice";
 
 export const fetchGetUsers = async (dispatch) => {
     try {
-        const response = await axios.get('http://localhost:4000/user');
+        const response = await axios.get('http://localhost:4000/users');
         await dispatch(setUserList(response.data))
     } catch (error) {
         console.log(error);

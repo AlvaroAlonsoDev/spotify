@@ -14,6 +14,7 @@ export const userSlice = createSlice({
         },
         setUserLogged: (state, action) => {
             state.userLogged = action.payload;
+            console.log(state.userLogged);
         },
         setIsLogged: (state, action) => {
             state.isLogged = action.payload;
@@ -24,11 +25,17 @@ export const userSlice = createSlice({
         },
         setUserRegister: (state, action) => {
             state.list = [...state.list, action.payload];
+        },
+        setUserLikedTrack: (state, action) => {
+            state.userLogged = {
+                ...state.userLogged,
+                'liked_tracks': [...state.userLogged.liked_tracks, action.payload]
+            }
         }
     },
 });
 
-export const { setUserList, setUserLogged, setIsLogged, setLogout, setUserRegister } = userSlice.actions;
+export const { setUserList, setUserLogged, setIsLogged, setLogout, setUserRegister, setUserLikedTrack } = userSlice.actions;
 
 export default userSlice.reducer;
 

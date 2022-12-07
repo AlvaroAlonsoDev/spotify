@@ -30,6 +30,7 @@ const ModalLogin = () => {
             if (checkUser.password === loginUser.password) {
                 dispatch(setUserLogged(checkUser));
                 dispatch(setIsLogged(true));
+
                 setShow(false);
                 setError(null);
             } else {
