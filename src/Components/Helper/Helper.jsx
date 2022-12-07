@@ -11,7 +11,7 @@ export const Helper = () => {
     useEffect(() => {
         dispatch(fetchGetUsers());
         fetchGetTracks(dispatch);
-        fetchGetAlbums(dispatch)
+        fetchGetAlbums(dispatch);
     }, [dispatch])
 
 }

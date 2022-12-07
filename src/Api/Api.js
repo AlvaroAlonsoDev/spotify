@@ -6,11 +6,12 @@ import { setUserList, setUserLogged } from "../redux/features/user/userSlice";
 
 export const fetchGetUsers = () => async (dispatch) => {
     try {
-        const resp = await axios.get('http://localhost:4000/users');
-        await dispatch(setUserList(resp.data));
-    } catch (error) { console.log(error) }
-};
-
+        const response = await axios.get('http://localhost:4000/users');
+        await dispatch(setUserList(response.data))
+    } catch (error) {
+        console.log(error);
+    };
+}
 
 export const fetchGetTracks = async (dispatch) => {
     try {
@@ -25,7 +26,7 @@ export const fetchGetAlbums = async (dispatch) => {
     try {
         const resp = await axios.get('http://localhost:4000/albums')
         await dispatch(setAlbumsList(resp.data))
-        
+
     } catch (error) {
         console.log(error);
     }

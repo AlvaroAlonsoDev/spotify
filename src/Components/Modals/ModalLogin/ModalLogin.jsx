@@ -28,12 +28,12 @@ const ModalLogin = () => {
     }
     return (
         <>
-                <MainBtn
-                    name='Login'
-                    className='btn__login--home btn-lg text-decoration-none'
-                    openModal={handleShow}
-                    variant='link'
-                />
+            <MainBtn
+                name='Login'
+                className='btn__login--home btn-lg text-decoration-none'
+                openModal={handleShow}
+                variant='link'
+            />
 
 
             <Modal show={show} fullscreen={fullscreen} onHide={() => setShow(false)}>
