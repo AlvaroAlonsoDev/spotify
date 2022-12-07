@@ -2,17 +2,15 @@ import { useSelector } from "react-redux"
 import Slider from "../Components/Slider/Slider"
 
 const HomePage = () => {
-  const tracks = useSelector(state => state.trackSlice);
-  const usersData = useSelector(state => state.userSlice);
-
   const albums = useSelector(state => state.albumSlice);
-  const track = useSelector(state => state.trackSlice);
-
+  const tracks = useSelector(state => state.trackSlice);
+  
   return (
     <>
       <div className="container">
         <Slider
           slidesPerView={1}
+          spaceBetween={5}
           size='big'
           img='img__big'
           array={albums}
@@ -37,9 +35,10 @@ const HomePage = () => {
       <div className="container">
         <Slider
           slidesPerView={2}
+          spaceBetween={100}
           size='small'
           img='img__small'
-          array={track}
+          array={tracks}
           title='Tracks'
           breakpoints={{
             640: {

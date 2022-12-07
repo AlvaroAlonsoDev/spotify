@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { Modal } from 'react-bootstrap';
 import { RxHamburgerMenu } from "react-icons/rx"
 import { MainBtn } from '../../Buttons/MainBtn/MainBtn';
-import { Link } from 'react-router-dom';
 
 const ModalAside = () => {
 
@@ -28,7 +27,6 @@ const ModalAside = () => {
                 </Modal.Header>
                 <Modal.Body>
                     <ul>
-                        <li><Link to='/profile'>Profile</Link></li>
                         <li>Buscador</li>
                         <li>Listen now </li>
                         <li>Browse</li>

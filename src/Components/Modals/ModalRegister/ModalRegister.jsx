@@ -1,5 +1,5 @@
 // redux
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 
 
 import { useState } from "react";
@@ -11,8 +11,7 @@ import { functionRegister } from "../../../Api/postApi";
 export const ModalRegister = () => {
     const [fullscreen, setFullscreen] = useState(true);
     const [show, setShow] = useState(false);
-    const [error, setError] = useState(null);
-    const usersData = useSelector(state => state.userSlice);
+    // const usersData = useSelector(state => state.userSlice);
     const dispatch = useDispatch();
 
     function handleShow(v) {
@@ -43,6 +42,16 @@ export const ModalRegister = () => {
                                 <div className="form-floating mb-3">
                                     <input type="text" name="username" className="form-control" id="floatingInput" placeholder="name@example.com" />
                                     <label htmlFor="floatingInput">Username</label>
+                                </div>
+
+                                <div className="form-floating mb-3">
+                                    <input type="text" name="firstname" className="form-control" id="floatingInput" placeholder="name@example.com" />
+                                    <label htmlFor="floatingInput">First name</label>
+                                </div>
+
+                                <div className="form-floating mb-3">
+                                    <input type="text" name="lastname" className="form-control" id="floatingInput" placeholder="name@example.com" />
+                                    <label htmlFor="floatingInput">Last name</label>
                                 </div>
 
                                 <div className="form-floating mb-3">

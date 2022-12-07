@@ -23,7 +23,7 @@ const ModalLogin = () => {
     const login = (e) => {
         e.preventDefault()
         //POST al backend
-        functionLogin(e, userData, dispatch, setShow)
+        functionLogin(e, userData, dispatch)
         setShow(false);
     }
     return (

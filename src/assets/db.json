@@ -223,7 +223,7 @@
         "password": "123",
         "profilePicture": "https://robohash.org/suntvoluptasnisi.png?size=50x50&set=set1"
       },
-      "playlists": [
+      "myplaylists": [
         {
           "id": 1,
           "name": "Road trip! All the masters I need!",
@@ -263,16 +263,45 @@
           "thumbnail": "https://res.cloudinary.com/dmkdsujzh/image/upload/v1644583757/tracks-thumbnails-dev/alone_rfib7a.jpg",
           "genre": "poprock"
         }
+      ],
+      "liked_album": [
+        {
+          "id": 1,
+          "name": "Flyga",
+          "tracks": [
+            {
+              "id": 1,
+              "name": "Better of alone",
+              "artist": "Kim Cesarion",
+              "url": "https://res.cloudinary.com/dmkdsujzh/video/upload/v1644583924/tracks-dev/Rxbyn_-_better_off_alone_fvhwp8.mp3",
+              "thumbnail": "https://res.cloudinary.com/dmkdsujzh/image/upload/v1644583757/tracks-thumbnails-dev/better_off_alone_gfmcby.jpg",
+              "genre": "piano"
+            },
+            {
+              "id": 2,
+              "name": "Alone",
+              "artist": "Color Out",
+              "url": "https://res.cloudinary.com/dmkdsujzh/video/upload/v1644583929/tracks-dev/Color_Out_-_Alone_aw3gmk.mp3",
+              "thumbnail": "https://res.cloudinary.com/dmkdsujzh/image/upload/v1644583757/tracks-thumbnails-dev/alone_rfib7a.jpg",
+              "genre": "poprock"
+            }
+          ],
+          "imageUrl": "https://i.scdn.co/image/ab67616d0000b273cfb34a37cfed6297d8c18231",
+          "artist": "Kim Cesarion"
+        }
       ]
     },
     {
       "id": 2,
-      "username": "Lidia",
-      "first_name": "Lidia",
-      "last_name": "Frias",
-      "email": "lidia@gmail.com",
-      "password": "123",
-      "playlists": [
+      "userData": {
+        "username": "Lidia",
+        "first_name": "Lidia",
+        "last_name": "Frias",
+        "email": "lidia@gmail.com",
+        "password": "123",
+        "profilePicture": "https://robohash.org/suntvoluptasnisi.png?size=50x50&set=set1"
+      },
+      "myplaylists": [
         {
           "id": 1,
           "name": "Road trip! All the masters I need!",
@@ -311,13 +340,47 @@
           "genre": "poprock"
         }
       ],
+      "liked_album": [
+        {
+          "id": 1,
+          "name": "Flyga",
+          "tracks": [
+            {
+              "id": 1,
+              "name": "Better of alone",
+              "artist": "Kim Cesarion",
+              "url": "https://res.cloudinary.com/dmkdsujzh/video/upload/v1644583924/tracks-dev/Rxbyn_-_better_off_alone_fvhwp8.mp3",
+              "thumbnail": "https://res.cloudinary.com/dmkdsujzh/image/upload/v1644583757/tracks-thumbnails-dev/better_off_alone_gfmcby.jpg",
+              "genre": "piano"
+            },
+            {
+              "id": 2,
+              "name": "Alone",
+              "artist": "Color Out",
+              "url": "https://res.cloudinary.com/dmkdsujzh/video/upload/v1644583929/tracks-dev/Color_Out_-_Alone_aw3gmk.mp3",
+              "thumbnail": "https://res.cloudinary.com/dmkdsujzh/image/upload/v1644583757/tracks-thumbnails-dev/alone_rfib7a.jpg",
+              "genre": "poprock"
+            }
+          ],
+          "imageUrl": "https://i.scdn.co/image/ab67616d0000b273cfb34a37cfed6297d8c18231",
+          "artist": "Kim Cesarion"
+        }
+      ],
       "profilePicture": "https://robohash.org/suntvoluptasnisi.png?size=50x50&set=set1"
     },
     {
-      "id": "1e1d4133-2a0e-44a7-b41c-e1cfd1b63c87",
-      "username": "lidia@gmail.comm",
-      "email": "lidia@gmail.comm",
-      "password": "123"
+      "id": "46ab6f11-f764-44c1-8e3c-5595c6cf1f6b",
+      "userData": {
+        "username": "alico23",
+        "firstname": "Alvaro",
+        "lastname": "Irurita",
+        "email": "airuritac@gmail.com",
+        "password": "123"
+      },
+      "myplaylists": [],
+      "liked_tracks": [],
+      "liked_album": [],
+      "profilePicture": ""
     }
   ],
   "albums": [
@@ -342,7 +405,7 @@
           "genre": "poprock"
         }
       ],
-      "imageUrl": "https://i.scdn.co/image/ab67616d0000b273cfb34a37cfed6297d8c18231",
+      "thumbnail": "https://i.scdn.co/image/ab67616d0000b273cfb34a37cfed6297d8c18231",
       "artist": "Kim Cesarion"
     },
     {
@@ -366,7 +429,7 @@
           "genre": "poprock"
         }
       ],
-      "imageUrl": "https://i.scdn.co/image/ab67616d0000b273256e16efc88a39e4795d5f32",
+      "thumbnail": "https://i.scdn.co/image/ab67616d0000b273256e16efc88a39e4795d5f32",
       "artist": "C.Gambino"
     },
     {
@@ -392,7 +455,7 @@
           "liked": false
         }
       ],
-      "imageUrl": "https://i.scdn.co/image/ab67616d0000b273cfb34a37cfed6297d8c18231",
+      "thumbnail": "https://i.scdn.co/image/ab67616d0000b273cfb34a37cfed6297d8c18231",
       "artist": "Kim Cesarion"
     },
     {
@@ -418,7 +481,7 @@
           "liked": false
         }
       ],
-      "imageUrl": "https://i.scdn.co/image/ab67616d0000b273256e16efc88a39e4795d5f32",
+      "thumbnail": "https://i.scdn.co/image/ab67616d0000b273256e16efc88a39e4795d5f32",
       "artist": "C.Gambino"
     },
     {
