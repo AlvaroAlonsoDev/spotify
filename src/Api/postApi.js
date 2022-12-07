@@ -13,9 +13,18 @@ export const fetchPostUser = async (newUser, dispatch) => {
 export const functionRegister = async (e, dispatch) => {
     const new_user = {
         id: uuidv4(),
-        username: e.target.username.value,
-        email: e.target.email.value,
-        password: e.target.password.value
+        userData: {
+            username: e.target.username.value,
+            firstname: e.target.firstname.value,
+            lastname: e.target.lastname.value,
+            email: e.target.email.value,
+            password: e.target.password.value
+        },
+        myplaylists:[],
+        liked_tracks:[],
+        liked_album:[],
+        profilePicture:''
     }
+    console.log(new_user);
     await fetchPostUser(new_user, dispatch);
 }

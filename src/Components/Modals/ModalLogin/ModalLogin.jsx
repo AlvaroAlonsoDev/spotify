@@ -23,17 +23,17 @@ const ModalLogin = () => {
     const login = (e) => {
         e.preventDefault()
         //POST al backend
-        functionLogin(e, userData, dispatch, setShow)
+        functionLogin(e, userData, dispatch)
         setShow(false);
     }
     return (
         <>
-                <MainBtn
-                    name='Login'
-                    className='btn__login--home btn-lg text-decoration-none'
-                    openModal={handleShow}
-                    variant='link'
-                />
+            <MainBtn
+                name='Login'
+                className='btn__login--home btn-lg text-decoration-none'
+                openModal={handleShow}
+                variant='link'
+            />
 
 
             <Modal show={show} fullscreen={fullscreen} onHide={() => setShow(false)}>

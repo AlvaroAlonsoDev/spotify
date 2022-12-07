@@ -1,3 +1,4 @@
 .swiper-slide {
-    width: 200px !important;
+    /* width: 250px !important; */
+    margin-right: 30px !important;
 }
