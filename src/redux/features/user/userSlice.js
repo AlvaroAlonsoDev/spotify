@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 
 export const userSlice = createSlice({
-    name: "usersData",
+    name: "users",
     initialState: {
         isLogged: false,
         userLogged: null,
@@ -14,21 +14,29 @@ export const userSlice = createSlice({
         },
         setUserLogged: (state, action) => {
             state.userLogged = action.payload;
+            state.isLogged = true;
         },
-        setIsLogged: (state, action) => {
-            state.isLogged = action.payload;
+        setUserLogOut: (state) => {
+            state.isLogged = false;
+            state.userLogged = null;
+            console.log('Te deslogeaste wey');
         },
-        setLogout: (state) => {
-            state.isLogged = false
-            state.userLogged = null
-        },
-        setUserRegister: (state, action) => {
+        registerUser: (state, action) => {
             state.list = [...state.list, action.payload];
+        },
+        setNewPassword: (state, action) => {
+            let interim = [];
+            (state.list).forEach(e => {
+                if (e.id === action.payload.id) {
+                    const x = action.payload;
+                    interim.push(x)
+                } else { interim.push(e) }
+            });
+            state.list = interim;
         }
-    },
+    }
 });
 
-export const { setUserList, setUserLogged, setIsLogged, setLogout, setUserRegister } = userSlice.actions;
+export const { setUserList, setUserLogged, setUserLogOut, registerUser, setNewPassword } = userSlice.actions;
 
 export default userSlice.reducer;
-

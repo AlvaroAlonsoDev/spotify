@@ -5,6 +5,7 @@ import "../../index.css"
 import { Pagination } from "swiper";
 import Card from "../Card/Card";
 import { v4 as uuidv4 } from 'uuid';
+import './Slider.css'
 
 
 export default function Slider({ array, title, size, slidesPerView, img, breakpoints }) {
@@ -22,7 +23,6 @@ export default function Slider({ array, title, size, slidesPerView, img, breakpo
                 modules={[Pagination]}
                 className="mySwiper"
             >
-
 
                 <div className="row">
 
