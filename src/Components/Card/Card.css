@@ -27,3 +27,11 @@
 .card-body {
     border: none;
 }
+
+.card__button--like {
+    position: absolute;
+    border: none;
+    background-color: transparent;
+    margin: 0.5rem 0 0 0.5rem;
+    
+}
